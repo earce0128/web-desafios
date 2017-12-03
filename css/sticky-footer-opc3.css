@@ -1,0 +1,29 @@
+html, body {
+  height: 100%;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  font: 16px Sans-Serif;
+}
+h1 {
+  margin: 10px 10px 20px 10px;
+}
+p {
+  margin: 20px 0 0 10px;
+}
+footer {
+  background: #74DF00;
+  color: #1c3643;
+  line-height: 50px;
+  padding: 0 20px;
+  font-weight: 800;
+}
+.contenedor {
+  padding: 0px;
+  min-height: calc(100vh - 50px);
+}
+.footer {
+  height: 50px;
+}

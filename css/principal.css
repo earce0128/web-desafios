@@ -1,0 +1,40 @@
+h1 {
+	font-size: 26px;
+	color: white;
+	margin-bottom: 10px;
+}
+a {
+	color: #74DF00;
+	text-decoration: none;
+}
+.header h1 {
+	padding: 20px;
+}
+.cont-img {
+	display: flex;
+	align-items: center;
+}
+.background-global {
+	background-image: url("../images/portada.png");
+	background-size: cover;
+	height: calc(100vh - 80px);
+}
+.contenedor {
+	padding-top: 40px;
+	width: 600px;
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+}
+.opcion {
+	display: flex;
+	justify-content: space-around;
+	background: #1c3643;
+	border: 2px solid #74DF00;
+	padding-bottom: 10px;
+}
+.informacion {
+	display: flex;
+	flex-direction: column;
+	width: 500px;
+}
