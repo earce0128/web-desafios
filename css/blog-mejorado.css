@@ -1,0 +1,289 @@
+body {
+	/*
+	Todo el modelo de caja tiene un margen de 8px 
+	por defecto y con margin 0 lo eliminamos y 
+	podemos disponer del máximo ancho y largo de la página 
+	*/
+	margin: 0; 
+	font-family: 'Open Sans', sans-serif;
+	color: #515151;
+}
+header {
+	background-color: #263C4A;
+	height: 50px;
+	/*Prefijos de compatibilidad con otros navegadores */
+	/* -webkit- Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+	display: -webkit-flex; 
+	/* -moz- Firefox 3.5 - 3.6 */
+	display: -moz-flex; 
+	/* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+	display: flex; 
+	-webkit-justify-content: space-between;
+	-moz-justify-content: space-between;
+	justify-content: space-between;
+	/* Aliniación vertical de los hijos de flex */
+	-webkit-align-items: center;
+	-moz-align-items: center;
+	align-items: center; 
+	padding: 0 10px;
+}
+.header-right {
+	height: inherit;
+	display: -webkit-flex;
+	display: -moz-flex;
+	-webkit-align-items: center;
+	-moz-align-items: center;
+	align-items: center;
+}
+.header-right .button {
+	margin-left: 10px;
+}		
+.button {
+	background: gray;
+	/*border-bottom: 5px solid black;*/
+	-webkit-box-shadow: inset 0 -5px 0 rgba(0,0,0,.3);
+	box-shadow: inset 0 -5px 0 rgba(0,0,0,.3);
+	font-size: 14px;
+	padding: 5px 10px 10px;
+	border-radius: 5px;
+	text-decoration: none;
+	color: white;
+	-webkit-transition: .2s;
+	-moz-transition: .2s;
+	transition: .2s;
+}
+.button:active {
+	-webkit-transform: scale(.9);
+	transform: scale(.9);
+}
+.button.red {
+	background: #ff4842;
+	/*border-color: yellow;*/
+}
+.button.green {
+	background: #7dcd40;
+	/*border-color: purple;*/
+}
+nav {
+	/*
+	Moviendo menú a la derecha
+	
+	Ejemplo 1 - Usando float
+	float: right 
+	
+	Ejemplo 2 - Usuando position absolute
+	position: absolute;
+	right: 0;
+	top: 0;
+	*/
+
+	/* Esta propiedad sirve para heredar el alto del padre */
+	height: inherit;
+}
+nav ul {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: flex;
+	margin: 0;
+	height: inherit;
+}
+nav li {
+	/* Los elementos li, también tienen que ser flex, debido a
+	que se necesita poner una separación entre cada elemento 
+	y li en inline
+	*/
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: flex;
+	-webkit-align-items: center;
+	-moz-align-items: center;
+	align-items: center;
+	/* Elimina los bullets, de los elementos de lista */
+	list-style: none;
+	/* Coloca márgenes hacia arriba y abajo de 0px y 
+	a los lados de 10px 
+	margin: 0 10px;
+	*/
+	color: white;
+	height: inherit;
+}
+nav li:after {
+	content: '|';
+	/* Para lograr colocar margenes entre todos los 
+	elementos del li, los volvemos inline-block
+	*/
+	display: inline-block;
+	margin: 0; 
+}
+nav li:last-child:after {
+	/* Elimina el último "|" de la lista */ 
+	display: none;
+}
+nav a {
+	/* 
+	Como a es un elemento de linea, sólo ocupa el ancho
+	y alto de su contenido, por lo que si queremos agregarle
+	estas propiedades, debemos volverlo un elemento de bloque o
+	flex
+	*/
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: flex;
+		/* Y ahora podemos agregar altos, anchos y alinear los 
+	elementos con flex o block */
+	-webkit-align-items: center;
+	-moz-align-items: center;
+	align-items: center;
+	/* Elimina el subrayado de los elementos de la lista */
+	text-decoration: none;
+	color: white;
+	height: inherit;
+	/*border-top: 5px solid transparent;*/
+	padding: 0 10px;
+}
+nav a.is-active {
+	-webkit-box-shadow: inset 0 5px 0 #92c33e;
+	-moz-box-shadow: inset 0 5px 0 #92c33e;
+	box-shadow: inset 0 5px 0 #92c33e;
+}
+nav a:hover {
+	/*
+	Para lograr un efecto de iluminar alguno de los bordes se 
+	puede	utilizar un truco con box-shadow 
+	box-shadow: 
+	   donde se ubica la sombra: inset, 
+	   movimiento de sombra en X: 10px, 
+	   movimiento de sombra en Y: 10px, 
+	   difuminado de sombre: 30px,
+	   color de la sombre: red;
+	*/
+	-webkit-box-shadow: inset 0 5px 0 #ff4842;
+	-moz-box-shadow: inset 0 5px 0 #ff4842;
+	box-shadow: inset 0 5px 0 #ff4842;
+	/*border-top: 5px solid red;*/
+}
+h1 {
+	margin: 0;
+	font-weight: 600;
+	font-size: 1.17em;
+	margin-bottom: 15px;
+}
+.blog {
+	width: 1000px;
+	margin: 0 auto;
+}
+.principal {
+	margin: 0;
+	background: #eee;
+	background-size: cover;
+}
+.buscar {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: flex;
+	-webkit-justify-content: flex-end;
+	-moz-justify-content: flex-end;
+	justify-content: flex-end;
+	padding: 5px 0;
+}
+.buscar img {
+	background: black;
+	padding: 5px;
+	border-radius: 3px;
+}
+.buscar input {
+	border-radius: 3px;
+	border-style: none;
+	margin: 0 5px;
+}
+.portada {
+	position: relative;
+	margin-bottom: 20px; 
+}
+.portada .description {
+	background: rgba(255, 255, 255, 0.8);
+	position: absolute;
+	bottom: 30px;
+	left: 20px;
+	padding: 20px;
+}
+.contenedor-items {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	-moz-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-webkit-justify-content: space-between;
+	-moz-justify-content: space-between;
+	justify-content: space-between;
+}
+.contenedor-items h3 {
+	font-weight: 600;
+	margin: 10px 0 15px;
+}
+.item-blog {
+	width: 300px;
+}
+.item-blog .description {
+	margin-bottom: 15px;
+}
+.paginador {
+	padding: 20px 0;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: flex;
+	-webkit-justify-content: center;
+	-moz-justify-content: center;
+	justify-content: center; 
+	-webkit-align-items: center;
+	-moz-align-items: center;
+	align-items: center; 
+}
+.paginador ul {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: flex;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	margin-left: 10px;
+}
+.paginador li {
+	background: #eaeaea;
+	height: 40px;
+	line-height: 40px;
+	padding: 0 10px;
+	border: 1px solid gray;
+	margin: 0 5px;
+}
+.paginador li.selected {
+	border: transparent;
+	background: transparent;
+}
+.paginador a {
+	text-decoration: none;
+	color: #515151;
+}
+.autor {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: flex;
+	-webkit-justify-content: space-between;
+	-moz-justify-content: space-between;
+	justify-content: space-between;
+	-webkit-align-items: center;
+	-moz-align-items: center;
+	align-items: center;
+	font-size: 13px;
+	border-top: 1px solid gray;
+	padding-top: 15px;
+}
+.autor img {
+	border-radius: 50%; /*Para que esté redondeada*/
+	vertical-align: middle;
+	margin-right: 5px;
+}
+.autor p {
+	margin-bottom: 0;
+}

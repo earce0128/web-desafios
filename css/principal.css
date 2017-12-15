@@ -11,7 +11,11 @@ a {
 	padding: 20px;
 }
 .cont-img {
+	display: -webkit-flex;
+	display: -moz-flex;
 	display: flex;
+	-webkit-align-items: center;
+	-moz-align-items: center;
 	align-items: center;
 }
 .background-global {
@@ -23,18 +27,30 @@ a {
 	padding-top: 40px;
 	width: 600px;
 	margin: auto;
+	display: -webkit-flex;
+	display: -moz-flex;
 	display: flex;
+	-webkit-flex-direction: column;
+	-moz-flex-direction: column;
 	flex-direction: column;
 }
 .opcion {
+	display: -webkit-flex;
+	display: -moz-flex;
 	display: flex;
+	-webkit-justify-content: space-around;
+	-moz-justify-content: space-around;
 	justify-content: space-around;
 	background: #1c3643;
 	border: 2px solid #74DF00;
 	padding-bottom: 10px;
 }
 .informacion {
+	display: -webkit-flex;
+	display: -moz-flex;
 	display: flex;
+	-webkit-flex-direction: column;
+	-moz-flex-direction: column;
 	flex-direction: column;
 	width: 500px;
 }
