@@ -2,32 +2,33 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Sticky Footer Opc1</title>
+	<title>Sticky Footer con Flex</title>
 	<link rel="stylesheet" type="text/css" href="css/sticky-footer-opc1.css" />
-	<link rel="stylesheet" type="text/css" href="css/general.css" />
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700" rel="stylesheet"> 
 </head>
 <body>
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-	<div class="content">
-	  <div class="header">
-			<figure class="logotipo"> <!-- logotipo -->
-	      <img class="transicion trans_logo" src="images/platzi_logo.png" with="230" height="72" alt="Platzi Logo" />
-	    </figure>
-	    <div class="cont-boton-header">
-	    	<a class="boton-principal trans-boton-inicio" href="index.html">Menú Principal</a>
-	    </div>
+	<section id=contenedor class="contenedor">
+		<div class=header>
+			<a href="https://platzi.com/">
+				<img src="https://static.platzi.com/static/images/logos/platzi.3cae3cffd5ef.png" alt="logo" height="30">
+			</a>
+			<a href="index.html" class="button red">Menú principal</a>
 		</div>
-	  <h1>Sticky Footer con márgen negativo usando elemento adicional <i>(push)</i></h1>
-	  <p><button id="add">Agregar Contenido</button></p>
-	  <div class="push"></div>
-	</div>
+		<h2>Sticky Footer con márgen negativo usando elemento adicional <i>(push)</i></h2>
+		<a href="#" onclick="agregarTexto()" class="button green">Agregar Contenido</a>	
+		<div id="push" class="push"></div>
+	</section>
 	<footer class="footer">
-	  Footer 
+		<h2>Footer</h2>
 	</footer>
-	<script>
-		$("#add").on("click", function() {
-	  $("<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>").insertBefore(".push");
-	});
+	<script type="text/javascript">
+		function agregarTexto() {
+			var $contenedor = document.getElementById("contenedor");
+			var $push = document.getElementById("push");
+			var p = document.createElement("p");
+			p.innerHTML = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum fugit dignissimos, eaque quas aliquid laudantium, distinctio quaerat odit ad assumenda animi hic, in aspernatur nulla a amet provident esse mollitia.";
+			$contenedor.insertBefore(p,$push);
+		}
 	</script>
 </body>
 </html>
