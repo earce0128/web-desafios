@@ -1,32 +1,48 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<meta charset="utf-8">
-	<title>Sticky Footer con Flex</title>
-	<link rel="stylesheet" type="text/css" href="css/sticky-footer-opc4.css" />
+	<meta charset="UTF-8">
+	<title>Sticky Footer Mejorado</title>
+	<link rel="stylesheet" type="text/css" href="css/sticky-footer-opc5.css" />
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700" rel="stylesheet"> 
 </head>
-<body>
-  <header class="header">
+<body id="body">
+	<header id="header" class="header">
 		<a href="https://platzi.com/">
 			<img src="https://static.platzi.com/static/images/logos/platzi.3cae3cffd5ef.png" alt="logo" height="30">
 		</a>
 		<a href="index.html" class="button red">Menú principal</a>
 	</header>
 	<section id="contenido">
-	  <h2>Sticky Footer con <i>Flex</i></h2>
+	  <h2>Sticky Footer usando javascript</h2>
 	  <a href="#" onclick="agregarTexto()" class="button green">Agregar Contenido</a>
 	</section>
-	<footer>
+	<footer id="footer">
 		<h2>Footer</h2>
 	</footer>
 	<script type="text/javascript">
+		var $contenido = document.getElementById("contenido");
+		var $footer = document.getElementById("footer");
+		var $header = document.getElementById("header");
+		var $body = document.getElementById("body");
+
+		var alto = $body.offsetHeight - ($header.offsetHeight + $footer.offsetHeight) -20;
+		/* $body.offsetHeight: Devuelve el alto de body */
+		/*
+		console.log("Body: " + $body.offsetHeight); 
+		console.log("Header: " + $header.offsetHeight); 
+		console.log("Footer: " + $footer.offsetHeight); 
+		console.log("Contenido: " + $contenido.offsetHeight);
+		*/
+		$contenido.style.minHeight = alto + "px";
+
 		function agregarTexto() {
 			var $contenido = document.getElementById("contenido");
 			var p = document.createElement("p");
 			p.innerHTML = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum fugit dignissimos, eaque quas aliquid laudantium, distinctio quaerat odit ad assumenda animi hic, in aspernatur nulla a amet provident esse mollitia.";
 			$contenido.appendChild(p);
 		}
+
 	</script>
 </body>
 </html>
