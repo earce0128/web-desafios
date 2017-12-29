@@ -1,33 +1,115 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8">
-		<title>Desafío 4 - Centrando elementos</title>
-		<link rel="stylesheet" type="text/css" href="css/centrado.css" />
-		<link rel="stylesheet" type="text/css" href="css/general.css" />
-	</head>
-	<body>
-		<header class="header">
-			<figure class="logotipo"> 
-	      <img class="transicion trans_logo" src="images/platzi_logo.png" with="230" height="72" alt="Platzi Logo" />
-	    </figure>
-	    <div class="cont-boton-header">
-	    	<a class="boton-principal trans-boton-inicio" href="index.html">Menú Principal</a>
-	    </div>
-		</header>
-		<section class="contenedor">
-			<div class="cont-elemento">
-				<h2>Usando flex justify-content y align-items center</h2>
-				<img src="images/paisaje1.jpg" width="100" height="100">
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Alineación con CSS - Reto 4</title>
+	<link rel="stylesheet" type="text/css" href="css/centrado.css" />
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700" rel="stylesheet"> 
+</head>
+<body>
+	<header class="header">
+		<a href="https://platzi.com/">
+			<img src="https://static.platzi.com/static/images/logos/platzi.3cae3cffd5ef.png" alt="logo" height="30">
+		</a>
+		<a href="index.html" class="button red">Menú principal</a>
+	</header>
+	<h1>Alineaciones Horizontales</h1>
+	<h2>Tamaño fijo con ancho declarado.</h2>
+	<div class="caja alineacion-horz-1">
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non sed, sapiente repellendus corrupti, cum nam eum ad ducimus maxime commodi, voluptatum unde, explicabo tempora ex numquam consequatur autem earum magni?</p>
+	</div>
+	<h2>Tamaño fijo usando calc().</h2>
+	<div class="caja alineacion-horz-2">
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non sed, sapiente repellendus corrupti, cum nam eum ad ducimus maxime commodi, voluptatum unde, explicabo tempora ex numquam consequatur autem earum magni?</p>
+	</div>
+	<h2>Elementos con display inline-block</h2>
+	<div class="alineacion-horz-3">
+		<div class="caja">
+			<img src="./images/paisaje1.jpg" alt="Paisaje" width="200" height="200">
+		</div>
+		<div class="caja">
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam nulla autem doloremque asperiores, cum officia provident quo eaque vel sunt distinctio voluptatibus harum quis nesciunt, quam magnam fuga vitae tempora.</p>
+		</div>
+		<div class="caja">
+			<img src="./images/paisaje3.jpg" alt="Paisaje" width="200" height="200">
+		</div>
+	</div>
+	<h2>Elementos con position absolute A</h2>
+	<div class="alineacion-horz-4">
+		<div class="caja">
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi blanditiis, sint nisi ex, quidem voluptate temporibus tempora quos obcaecati repellendus nihil ipsum quisquam impedit debitis quis voluptatem veritatis, fugit saepe.</p>
+		</div>
+	</div>
+	<h2>Elementos con position absolute B</h2>
+	<div class="alineacion-horz-5">
+		<div class="caja">
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi blanditiis, sint nisi ex, quidem voluptate temporibus tempora quos obcaecati repellendus nihil ipsum quisquam impedit debitis quis voluptatem veritatis, fugit saepe.</p>
+		</div>
+	</div>
+	<h2>Elementos con display flex</h2>
+	<div class="alineacion-horz-6">
+		<div class="caja">
+			<img src="./images/paisaje2.jpg" alt="Paisaje" width="200" height="200">
+		</div>
+		<div class="caja">
+			<img src="./images/paisaje1.jpg" alt="Paisaje" width="200" height="200">
+		</div>
+	</div>
+	<h2>Elementos con display table</h2>
+	<div class="contenedor">
+		<div class="alineacion-horz-7">
+			<div class="caja">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum officia magnam perspiciatis ipsa natus autem, doloribus est dolores distinctio. Repellendus quae vero alias accusantium soluta, quaerat distinctio, laudantium repellat iusto.</p>
 			</div>
-			<div class="cont-elemento2">
-				<h2>Usando inline-block y text-align center</h2>
-				<img src="images/paisaje2.jpg" width="100" height="100">
+			<div class="caja">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum officia magnam perspiciatis ipsa natus autem, doloribus est dolores distinctio. Repellendus quae vero alias accusantium soluta, quaerat distinctio, laudantium repellat iusto.</p>
 			</div>
-			<div class="cont-elemento3">
-				<h2>Usando %</h2>
-				<img src="images/paisaje3.jpg" width="100" height="100">
+		</div>
+	</div>
+	<h1>Alineaciones Vericales</h1>
+	<section class="cont-vertical">
+		<div class="cont-vert-interno">
+			<h2>Elementos con display table</h2>
+			<div class="alineacion-vert-1">
+				<div class="caja">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum officia magnam perspiciatis ipsa natus autem, doloribus est dolores distinctio. Repellendus quae vero alias accusantium soluta, quaerat distinctio, laudantium repellat iusto.</p>
+				</div>
+				<div class="caja">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum officia magnam perspiciatis ipsa natus autem, doloribus est dolores distinctio. Repellendus quae vero alias accusantium soluta, quaerat distinctio, laudantium repellat iusto.</p>
+				</div>
+			</div>	
+		</div>
+		<div class="cont-vert-interno">
+			<h2>Elementos con display flex</h2>
+			<div class="alineacion-vert-2">
+				<div class="caja">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam beatae, doloribus, eum, sint maxime sed nulla ipsam nemo officiis laboriosam voluptatem neque ullam eos? Quisquam obcaecati minus nulla ad vero!</p>
+				</div>
 			</div>
-		</section>
-	</body>
+		</div>
+		<div class="cont-vert-interno">
+			<h2>Elementos con padding</h2>
+			<div class="alineacion-vert-3">
+				<div class="caja">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam beatae, doloribus, eum, sint maxime sed nulla ipsam nemo officiis laboriosam voluptatem neque ullam eos? Quisquam obcaecati minus nulla ad vero!</p>
+				</div>
+			</div>
+		</div>
+		<div class="cont-vert-interno">
+			<h2>Elementos con line-height</h2>
+			<div class="alineacion-vert-4">
+				<div class="una-linea">
+					<p>Una sola linea</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<h1>Alineaciones Mixtas</h1>
+	<h2>Elementos mixtos con vertical-align</h2>
+	<article class="cont-mixto">
+		<img src="./images/paisaje1.jpg" alt="Paisaje" width="100" height="100">
+		<span>@Edgar Arce</span>
+		<div>...Ver más</div>
+	</article>
+</body>
 </html>
