@@ -1,0 +1,146 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: #fff;
+  background-color: lightblue;
+  min-height: 100vh; 
+  margin: 0;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  flex-direction: column;
+}
+header {
+  height: 50px;
+  background: #273b47;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: flex;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  align-items: center;
+}
+header a {
+  margin: 0 10px;
+}
+h1 {
+  font-size: 25px;
+  background-color: #273b47;
+  color: #fff;
+}
+h2 {
+  font-size: 18px; 
+  background-color: #92c33e; 
+}
+.button {
+  background: gray;
+  /*border-bottom: 5px solid black;*/
+  -webkit-box-shadow: inset 0 -5px 0 rgba(0,0,0,.3);
+  box-shadow: inset 0 -5px 0 rgba(0,0,0,.3);
+  font-size: 14px;
+  padding: 5px 10px 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  color: white;
+  -webkit-transition: .2s;
+  -moz-transition: .2s;
+  transition: .2s;
+}
+.button:active {
+  -webkit-transform: scale(.9);
+  transform: scale(.9);
+}
+.button.red {
+  background: #ff4842;
+}
+.button.green {
+  background: #92c33e;
+}
+
+.contenedor {
+  height: calc(100vh - 50px);
+  width: 100vw;
+  /*
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  */
+  position: relative;
+}
+.cvanderland {
+  width: 1024px;
+  height: 243px;
+  background-image: url('../images/anim-background.png');
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0 auto; 
+}
+.cvander {
+  width: 166px;
+  height: 171px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+  transition: 0.3s;
+}
+.cvander-body {
+  position: absolute;
+  left: 0;
+  bottom: 0; 
+}
+.cvander-head {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.cvander-ipad {
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  transition: 0.5s; 
+}
+.cvander:hover {
+  
+}
+.cvander:hover .cvander-head{
+  /*animation: tiempo , nombre de la animación, ciclos*/
+  animation: .5s cvander infinite;
+  /*transform: translateY(5px);*/
+}
+.cvander:hover .cvander-ipad{
+  transform: rotate(-7deg);
+}
+@keyframes cvander {
+  /* 
+  Usando from - to 
+  from {
+    border: 3px solid red;
+  }
+  to {
+    border: 3px solid green; 
+  }
+  
+  Usando % 0% - 100% 
+  0% {
+    border: 3px solid red; 
+  }
+  50% {
+    border: 3px solid blue; 
+  }
+  100% {
+    border: 3px solid green;  
+  }
+  */
+  50% {
+    transform: translateY(5px) rotate(2deg);
+  }
+  100% {
+   transform: translateY(0px); 
+  }
+}
