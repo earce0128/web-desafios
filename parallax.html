@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Especial 1 - Efecto de Parallax</title>
+	<link rel="stylesheet" type="text/css" href="css/parallax.css" />
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700" rel="stylesheet"> 
+</head>
+<body>
+	<header class="header">
+		<a href="https://platzi.com/">
+			<img src="https://static.platzi.com/static/images/logos/platzi.3cae3cffd5ef.png" alt="logo" height="30">
+		</a>
+		<a href="index.html" class="button red">Menú principal</a>
+	</header>
+	<section class="contenedor">
+		<figure class="iphone" id="iphone">
+			<img src="images/iphone.jpg" alt="iphone">
+			<div class="shape" id="mask"></div>
+		</figure>
+	</section>
+	<script type="text/javascript">
+		const $iphone = document.getElementById('iphone'); 
+		const $mask = document.getElementById('mask');
+		window.addEventListener('scroll',function(e) {
+			var position = 60 + window.scrollY;
+			console.log(window.scrollY);
+			// $iphone.style.marginTop = window.scrollY + 'px';
+			$mask.style.backgroundPosition = '-' + position + 'px';
+			$iphone.style.transform = 'rotate(-'+ position * 0.02 +'deg)';
+		});
+	</script>
+</body>
+</html>
